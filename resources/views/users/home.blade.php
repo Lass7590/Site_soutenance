@@ -57,13 +57,15 @@
               <li><a href="#">GESTION</a></li>
             </ul>
           </li>
-          <li><a href="#">SOUTENANCE</a></li>
+          <li><a href="#">RESULTATS</a></li>
+          <li><a href="#">EMPLOI DU TEMPS</a></li>
+          <li><a href="{{URL:: to('/login')}}">SOUTENANCE</a></li>
           <li><a href="#">CONTACT</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="{{URL:: to('/login')}}" class="get-started-btn">CONNEXION</a>
+      {{-- <a href="{{URL:: to('/login')}}" class="get-started-btn">CONNEXION</a> --}}
 
     </div>
   </header><!-- End Header -->
@@ -311,7 +313,7 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h3>Nous suivre sur les réseaux sociaux</h3>
             
-            </form> --}}
+            </form>
           </div>
 
         </div>
@@ -355,4 +357,5 @@
 </body>
 
 </html>
+
 

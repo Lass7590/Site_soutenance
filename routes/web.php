@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,13 +18,23 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 
-//Route::get('/', [UserController::class, 'home']);
-Route::get('/', function (){
-    return view('users.home');
-});
-Route::get('/login', function (){
-    return view('users.login');
-});
-Route::get('/signup', function (){
-    return view('users.signup');
-});
+Route::resource('users', UserController::class);
+
+Route::get('/', [UserController::class, 'home']);
+Route::get('/login', [UserController::class, 'login']);
+Route::get('/signup', [UserController::class, 'signup']);
+Route::get('/etudiant', [UserController::class, 'etudiant']);
+Route::get('/rp', [UserController::class, 'rp']);
+Route::get('/jury', [UserController::class, 'jury']);
+Route::get('/encadreur', [UserController::class, 'encadreur']);
+Route::post('/creer_compte', [UserController::class, 'creer_compte']);
+
+// Route::get('/', function (){
+//     return view('users.home');
+// });
+// Route::get('/login', function (){
+//     return view('users.login');
+// });
+// Route::get('/signup', function (){
+//     return view('users.signup');
+// });
